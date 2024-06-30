@@ -8,6 +8,7 @@ import useAuth from "@/contexts/auth";
 import ThemeToggler from "@/components/ThemeToggler";
 
 import Login from "@/components/Layout/login";
+import { Link } from "react-router-dom";
 
 export default function Layout() {
   const { isLogin, logout } = useAuth();
@@ -17,7 +18,7 @@ export default function Layout() {
       {/* header */}
       <div className="h-16 border-b flex items-center justify-between px-6">
         <div>
-          <h2 className="text-2xl font-semibold uppercase">Pomodo Quest</h2>
+          <Link to="/" className="text-2xl font-semibold uppercase">Pomodo Quest</Link>
         </div>
         <div className="flex items-center gap-2">
           <ThemeToggler />

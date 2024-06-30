@@ -3,9 +3,9 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Menubar } from "@/components/ui/menubar";
 import { Separator } from "@/components/ui/separator";
 import { Ellipsis, PlusCircle } from "lucide-react";
+import TodoListFeature from "./_Todolist";
 
 export default function Home() {
   return (
@@ -26,18 +26,7 @@ export default function Home() {
         </CardContent>
       </Card>
       <Separator className="my-4" />
-      <div className="flex justify-end items-center">
-        <Button variant="outline">
-          <Ellipsis size={24} />
-        </Button>
-      </div>
-
-
-
-      <div className="border border-dashed flex items-center gap-2 justify-center h-20 hover:bg-slate-100 cursor-pointer mt-4">
-        <h4 className="relative top-0.5 text-lg">Add task</h4>
-        <PlusCircle size={24} />
-      </div>
+      <TodoListFeature />
     </div>
   )
 }
